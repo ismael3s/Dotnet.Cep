@@ -1,0 +1,6 @@
+﻿services:
+  dotnet.cep:
+    image: dotnet.cep
+    build:
+      context: ./src
+      dockerfile: Dotnet.Cep/Dockerfile
