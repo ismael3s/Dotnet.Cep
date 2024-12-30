@@ -19,6 +19,8 @@
 **/node_modules
 **/npm-debug.log
 **/obj
+**/obj/**
+**/obj/Release
 **/secrets.dev.yaml
 **/values.dev.yaml
 LICENSE
