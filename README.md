@@ -5,13 +5,13 @@ Project to search  for Brazilian CEPs in various providers and return the fastes
 
 ## Technical Goals
 
-- [x] Add Logging using `Serilog`
+- [x] Add Telemetry
+  - [x] Send Logs to Standalone Aspire Dashboard
   - [ ] Send Logs to New Relic
-- [x] Practice `Refit`
+- [x] Experiment `Microsoft.Extensions.Resilience.Http`
+- [x] Experiment `Refit`
 - [x] Experiment `Microsoft.Extension.HybridCache`
 - [x] Experiment `Scalar`
-- [ ] Learn how to send metrics to Grafana
-  - [ ] Create Metric to know what is the fastest/slowest provider
+- [x] Experiment `HybridCache`
+  - The tracing is lsot when using the HybridCache, but I didn't find a way to solve this by now
 - [x] Docker
-  - [X] WebAPI
-  - [ ] Console
