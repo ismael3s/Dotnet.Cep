@@ -1,6 +1,6 @@
 @ApiHostAddress = http://localhost:5000
 
-GET {{ApiHostAddress}}/cep/48009886
+GET {{ApiHostAddress}}/v1/cep/48009886
 Accept: application/json
 
 ###

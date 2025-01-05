@@ -1,6 +1,20 @@
 ﻿services:
-  dotnet.cep:
+  dotnet-cep:
     image: dotnet.cep
+    container_name: Dotnet.Cep
     build:
       context: ./src
       dockerfile: Dotnet.Cep/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://dotnet-dashboard:18889
+      OTEL_SERVICE_NAME: Dotnet.Cep
+    depends_on:
+      - dotnet-dashboard
+  dotnet-dashboard:
+      image: mcr.microsoft.com/dotnet/aspire-dashboard:9.0
+      container_name: Dotnet.Cep.Telemetry
+      ports:
+        - "18888:18888"
+        - "4317:18889"
